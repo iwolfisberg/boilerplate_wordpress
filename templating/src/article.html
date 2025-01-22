@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templating WordPress - Blog</title>
+    <link rel="stylesheet" href="scss/main.scss" />
+  </head>
+  <body class="bg-gray-100 text-gray-900 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <p class="text-2xl font-bold">Mon Blog</p>
+        <nav class="flex space-x-4">
+          <a href="#" class="text-gray-700 hover:text-gray-900">Accueil</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">À propos</a>
+          <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <main class="container mx-auto px-4 py-8">
+      <!-- Titre de l'article -->
+      <article class="mb-12">
+        <header class="mb-6">
+          <!-- Catégorie -->
+          <div class="mb-2">
+            <a
+              href="#"
+              class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-200"
+            >
+              Technologie
+            </a>
+          </div>
+          <h1 class="text-4xl font-bold mb-2">Titre de l'article</h1>
+          <p class="text-gray-600">
+            Publié le <time datetime="2025-01-01">1er janvier 2025</time> par
+            <span class="font-semibold">Auteur</span>
+          </p>
+        </header>
+
+        <!-- Image principale -->
+
+        <img
+          src="https://images.unsplash.com/photo-1737419997505-a6586ab9e290?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Image principale"
+          class="w-full h-[50vh] rounded shadow mb-8"
+        />
+
+        <!-- Contenu de l'article -->
+        <section class="prose max-w-[50%] mx-auto main-content">
+          <p>
+            Bienvenue dans cet article ! Voici un exemple de contenu stylisé
+            avec des classes CSS provenant de Gutenberg. Les styles sont séparés
+            pour garantir leur modularité.
+          </p>
+          <h2 class="wp-block-heading">Un sous-titre de deuxième niveau</h2>
+          <p>
+            Ce texte est un exemple de paragraphe pour démontrer les styles
+            génériques. Voici une liste des fonctionnalités typiques :
+          </p>
+          <ul class="wp-block-lis">
+            <li>Un élément de liste simple.</li>
+            <li>Un autre élément avec des détails intéressants.</li>
+            <li>Un dernier élément pour terminer en beauté.</li>
+          </ul>
+          <blockquote
+            class="wp-block-quote is-layout-flow wp-block-quote-is-layout-flow"
+          >
+            Ceci est une citation. « Le contenu Gutenberg est puissant et
+            flexible. »
+          </blockquote>
+          <h3 class="wp-block-heading">Un sous-titre de troisième niveau</h3>
+          <div class="wp-block-media-text is-stacked-on-mobile">
+            <figure class="wp-block-media-text__media">
+              <img
+                loading="lazy"
+                decoding="async"
+                width="1024"
+                height="716"
+                src="http://localhost/foody/wordpress/wp-content/uploads/2025/01/toa-heftiba-fW3ixGXyMI0-unsplash-1024x716.jpg"
+                alt=""
+                class="size-full"
+              />
+            </figure>
+            <div class="wp-block-media-text__content">
+              <p>
+                Ceci est un bloc Media & texte, qui met un média et du texte
+                côte-à-côte pour une mise en page plus riche.
+              </p>
+            </div>
+          </div>
+
+          <p>
+            Les blocs Gutenberg sont bien intégrés à WordPress. Voici un exemple
+            d'image :
+          </p>
+          <figure class="wp-block-image size-large">
+            <img
+              src="https://images.unsplash.com/photo-1737385024688-41bfd7d3ed13?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image secondaire"
+              class="rounded shadow"
+            />
+            <figcaption>Exemple d'image avec légende.</figcaption>
+          </figure>
+
+          <p>Pour conclure, voici un bouton classique :</p>
+          <p>
+            <a href="#" class="wp-block-button__link">Cliquez ici</a>
+          </p>
+        </section>
+      </article>
+
+      <!-- Section Autres Articles -->
+      <section>
+        <h2 class="text-3xl font-bold mb-4">Articles Récents</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Article Teaser (Grande Carte) -->
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1736843640230-ea1e8241ae42?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Article image"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Titre de l'article</h3>
+              <p class="text-gray-600 mb-4">
+                Un résumé captivant de l'article...
+              </p>
+              <a href="article.html" class="text-blue-500 hover:underline"
+                >Lire la suite →</a
+              >
+            </div>
+          </article>
+
+          <!-- Article Teaser (Petite Carte) -->
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1736843640230-ea1e8241ae42?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Article image"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Titre de l'article</h3>
+              <p class="text-gray-600 mb-4">
+                Un résumé captivant de l'article...
+              </p>
+              <a href="article.html" class="text-blue-500 hover:underline"
+                >Lire la suite →</a
+              >
+            </div>
+          </article>
+
+          <!-- Article Teaser (Grande Carte) -->
+          <article class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1736843640230-ea1e8241ae42?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Article image"
+              class="w-full h-40 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Titre d'un autre article</h3>
+              <p class="text-gray-600 mb-4">
+                Découvrez-en plus sur ce sujet captivant...
+              </p>
+              <a href="article.html" class="text-blue-500 hover:underline"
+                >Lire la suite →</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-100 py-6">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2025 Mon Blog. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>
